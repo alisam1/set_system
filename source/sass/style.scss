@@ -1,0 +1,24 @@
+@import "variables.scss";
+@import "blocks/normalize.scss";
+@import "blocks/container.scss";
+@import "blocks/main-header.scss";
+@import "blocks/search.scss";
+
+
+@font-face {
+    font-family: "PT-Sans";
+    src: url("../fonts/ptsanscaption/ptsanscaption.ttf") format('ttf'),
+         url("../fonts/ptsanscaption/ptsanscaption.woff") format('woff'),
+         url("../fonts/ptsanscaption/ptsanscaption.woff2") format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "PT-Sans-Bold";
+  src: url("../fonts/ptsanscaption/ptsanscaptionbold.ttf") format('ttf'),
+  url("../fonts/ptsanscaption/ptsanscaptionbold.woff") format('woff'),
+  url("../fonts/ptsanscaption/ptsanscaptionbold.woff2") format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
