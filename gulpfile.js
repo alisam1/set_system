@@ -15,6 +15,8 @@ var webp = require("gulp-webp");
 var imagemin = require("gulp-imagemin");
 var del = require("del");
 var run = require("run-sequence");
+var gulp = require('gulp');
+var ghPages = require('gulp-gh-pages');
 
 gulp.task("style", function() {
   gulp.src("source/sass/style.scss")
@@ -101,4 +103,9 @@ gulp.task("build", function (done) {
     "html",
     done
   );
+});
+
+gulp.task('deploy', function () {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
 });
