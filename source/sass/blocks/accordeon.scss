@@ -1,0 +1,229 @@
+$wetasphalt: #fff;
+$belizehole: #2980b9;
+.all {
+	text-align: center;
+
+	input[type="checkbox"] {
+		display: none;
+
+		&:checked + label {
+			background-color: $belizehole;
+			color: white;
+
+			&:before {
+				content: 'Close All';
+			}
+		}
+	}
+
+	label {
+		position: relative;
+		margin: 0;
+		padding: 5px 30px;
+		font-size: 14px;
+		font-weight: 300;
+		color: $belizehole;
+		background-color: white;
+		border: 1px solid $belizehole;
+		border-radius: 99px;
+
+		&:before {
+			content: 'Open All';
+		}
+	}
+}
+
+.accordion {
+	position: relative;
+	width: 100%;
+	margin: 0px auto;
+
+	.trigger {
+
+		#checkbox-1,
+		#checkbox-2,
+		#checkbox-3,
+		#checkbox-4,
+		#checkbox-5
+
+		{
+			display: none;
+
+			&:checked + label {
+				background-color: #fff;
+
+				i {
+
+					&:before {
+						transform: translate(5px,8px) rotate(45deg);
+					}
+
+					&:after {
+						transform: translate(-5px,8px) rotate(-45deg);
+					}				
+				}
+			}
+		}
+
+		.checkbox {
+			position: relative;
+			display: block;
+			width: 100%;
+			margin: 0;
+			padding: 20px;
+			font-family: $font-family;
+			font-size: 18px;
+			color: #0777ba;
+			cursor: pointer;
+			background-color: #fff;
+
+			i {
+				position: absolute;
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				right: 20px;
+				//float: right;
+
+				&:before,
+				&:after {
+					position: absolute;
+					content: '';
+					width: 16px;
+					height: 3px;
+					background-color: #0777ba;
+					transition: transform 250ms ease;
+				}
+
+				&:before {
+					transform: translate(-5px,8px) rotate(45deg);
+				}
+
+				&:after {
+					transform: translate(5px,8px) rotate(-45deg);
+				}
+			}
+		}
+
+		.content {
+			position: relative;
+			max-height: 1px;
+			padding: 0;
+			overflow-y: scroll;
+			font-size: 14px;
+			line-height: 1.5;
+			background-color:#fff;
+			margin-top: 15px;
+			transition: max-height 500ms ease-in-out;
+		}
+	}
+}
+
+#checkbox-1:checked ~ .content,
+#checkbox-2:checked ~ .content,
+#checkbox-3:checked ~ .content,
+#checkbox-4:checked ~ .content,
+#checkbox-5:checked ~ .content {
+	max-height: 350px;
+	transition: max-height 500ms ease-in-out;
+}
+
+a.check__tax
+{
+	font-family: $font-family;
+	font-size: 18px;
+	color: #0777ba;
+	border-bottom: 1px dashed #0777ba;
+	text-decoration: none;
+	margin-left: 50px;
+}
+
+.check__tax::before 
+{
+	content: "";
+	background-image: url("../img/check_4.svg");
+	width: 32px;
+	height: 37px;
+	position: absolute;
+	left: 20px;
+}
+
+a.check__gibdd
+{
+	font-family: $font-family;
+	font-size: 18px;
+	color: #0777ba;
+	border-bottom: 1px dashed #0777ba;
+	text-decoration: none;
+	margin-left: 50px;
+}
+
+.check__gibdd::before 
+{
+	content: "";
+	background-image: url("../img/check_gibdd.svg");
+	width: 33px;
+	height: 37px;
+	position: absolute;
+	left: 20px;
+}
+
+a.check__duty
+{
+	font-family: $font-family;
+	font-size: 18px;
+	color: #0777ba;
+	border-bottom: 1px dashed #0777ba;
+	text-decoration: none;
+	margin-left: 50px;
+}
+
+.check__duty::before 
+{
+	content: "";
+	background-image: url("../img/check_duty.svg");
+	width: 30px;
+	height: 27px;
+	position: absolute;
+	left: 20px;
+}
+
+a.check__justice
+{
+	font-family: $font-family;
+	font-size: auto;
+	color: #0777ba;
+	border-bottom: 1px dashed #0777ba;
+	text-decoration: none;
+	margin-left: 50px;
+}
+
+.check__justice::before 
+{
+	content: "";
+	background-image: url("../img/check_jistice.svg");
+	width: 35px;
+	height: 34px;
+	position: absolute;
+	left: 20px;
+}
+
+a.check__service
+{
+	font-family: $font-family;
+	font-size: 18px;
+	color: #0777ba;
+	border-bottom: 1px dashed #0777ba;
+	text-decoration: none;
+	margin-left: 50px;
+}
+
+.check__service::before 
+{
+	content: "";
+	background-image: url("../img/check_service.svg");
+	width: 33px;
+	height: 37px;
+	position: absolute;
+	left: 20px;
+}

@@ -11,22 +11,82 @@
 
     <header class="main-header">
 
+   <div class="header-desktop">
+
     <div class="main-header__content">
         <div class="main-header__login">
             <button class="login">
-                <a href="#">
+                <a class="popup-with-form" href="#test-form">
                     Войти
                 </a>
             </button>
+            <div id="test-form" class="main-header__form mfp-hide white-popup-block">
+                <div class="form__content">
+                <h4 class="form__title">Введите логин и пароль для входа в Личный кабинет</h4>
+                <form>
+                    <input type="text" name="text" placeholder="Логин">
+                    <input type="password" name="password" placeholder="Пароль">
+                    <input type="submit" name="submit" placeholder="Войти">
+                </form>
+                <p class="form__link"><a href="#">Забыли пароль?</a></p>
+                <p class="form__link"><a href="#">Регистрация</a></p>
+                
+            </div>
+            </div>
         </div>
 
         <div class="main-header__login"><img src="img/logo.svg" alt="Logo"></div>
 
         <div class="main-header__help">
-            <p class="help"><a href="#">Помощь</a></p>
+            <button onclick="dropFunction()" class="help dropbtn">Помощь</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#">Как это работает</a>
+                <a href="#">Вопрос-ответ</a>
+                <a href="#">Служба поддержки</a>
+            </div>
         </div>
 
     </div>
+    </div>
+
+        <div class="header-mobile">
+        
+            <nav class="mobile-menu container">
+                <div class="main-header__login"><img src="img/logo.svg" alt="Logo"></div>
+                <input type="checkbox" id="checkbox" class="mobile-menu__checkbox">
+                <label for="checkbox" class="mobile-menu__btn">
+                    <div class="mobile-menu__icon"></div>
+                </label>
+                <div class="mobile-menu__container">
+                    <ul class="mobile-menu__list">
+                        <li class="mobile-menu__item"><a href="#">Как это работает</a></li>
+                        <li class="mobile-menu__item"><a href="#">Вопрос-ответ</a></li>
+                        <li class="mobile-menu__item"><a href="#">Служба поддержки</a></li>
+                    </ul>
+                    <div class="page_header__login page_header__login--mobile">
+                        <button class="login">
+                            <a class="popup-with-form" href="#test-form__mobile">
+                                Войти
+                            </a>
+                        </button>
+                        <div id="test-form__mobile" class="main-header__form mfp-hide white-popup-block">
+                            <div class="form__content">
+                                <h4 class="form__title">Введите логин и пароль для входа в Личный кабинет</h4>
+                                <form>
+                                    <input type="text" name="text" placeholder="Логин">
+                                    <input type="password" name="password" placeholder="Пароль">
+                                    <input type="submit" name="submit" placeholder="Войти">
+                                </form>
+                                <p class="form__link"><a href="#">Забыли пароль?</a></p>
+                                <p class="form__link"><a href="#">Регистрация</a></p>
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
     
     </header>
 
@@ -39,11 +99,216 @@
             <div class="search__form">
                 <form>
                     <input name="s" placeholder="Введите данные для поиска" type="search">
-                    <button class="search__button" type="submit">Найти</button>
+                    <button class="search__button" type="submit"><span>Найти</span></button>
                 </form>
             </div>
             <div class="search__description">Чем больше параметров введено, тем полнее результаты поиска</div>
         </div>
+    </section>
+
+    <section class="payment">
+        <div class="container">
+            <h3 class="payment__title payment__title--desktop">Здесь можно оплатить</h3>
+            <h3 class="payment__title payment__title--mobile">Узнайте, как оплатить</h3>
+            <div class="payment__links">
+                <div class="link"><a href="#">Штрафы и пошлины ГИБДД</a></div>
+                <div class="link"><a href="#">Судебные задолженности</a></div>
+                <div class="link"><a href="#">Налоги</a></div>
+                <div class="link"><a href="#">Услуги Росреестра</a></div>
+                <div class="link">и другие услуги</div>
+            </div>
+        </div>
+
+        <div class="block__desktop">
+
+            <div class="block___all block___all--gibdd">
+            <div class="container">
+            <div class="block">
+                <div class="block__left">
+                    <h3 class="block__title">Штрафы ГИБДД</h3>
+                    <p class="block__description">Для поиска укажите номера водительского удостоверения и свидетельства о регистрации ТС или номер штрафа.</p>
+                    <p class="block__description">Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты самостоятельно.</p>
+                    <p class="block__description block__description--alert">платить Вовремя — дешевле!</p>
+                    <p class="block__description">В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%. Для своевременной оплаты штрафов настройте уведомления в Личном кабинете.</p>
+                    <p class="block__description block__description--link"><a href="#">Пошлины ГИБДД</a></p>
+                    <p class="block__description">Перейдите по ссылке и укажите вид пошлины и отделение ГИБДД, предоставляющее вам услугу.</p>
+                </div>
+
+                <div class="block__right">
+                    <img src="img/img_1.png" alt="">
+                </div>
+            </div>
+            </div>
+        </div>
+
+            <div class="block___all">
+                <div class="container">
+                    <div class="block block-reverse">
+                        <div class="block__left">
+                            <h3 class="block__title">Судебные задолженности</h3>
+                            <p class="block__description">Для поиска начислений в ГИС ГМП укажите документы:
+                            паспорт РФ, ИНН, СНИЛС или номер Исполнительного производства</p>
+                            <p class="block__description">Вы можете указать реквизиты платежа самостоятельно, заполнив форму.</p>
+                            <p class="block__description block__description--alert">Удобно!</p>
+                            <p class="block__description">Судебные задолженности можно погасить как сразу, так и по частям, комфортными для вас платежами. Информацию о
+                            совершенных платежах сохраняйте в Личном кабинете.</p>
+                        </div>
+                    
+                        <div class="block__right">
+                            <img src="img/img_2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block___all block___all--tax">
+                <div class="container">
+                    <div class="block">
+                        <div class="block__left">
+                            <h3 class="block__title">Налоги</h3>
+                            <p class="block__description">Для поиска начислений по налогам в ГИС ГМП укажите ИНН или
+                            Индекс налогового документа, усли у вас на руках есть квитанция.</p>
+                            <p class="block__description block__description--alert">Важно!</p>
+                            <p class="block__description">Согласно законодательству РФ вы не можете оплачивать налоги за других физических лиц. Принимаются только платежи физических лиц.</p>
+                        </div>
+                    
+                        <div class="block__right">
+                            <img src="img/img_3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block___all">
+                <div class="container">
+                    <div class="block block-reverse">
+                        <div class="block__left">
+                            <h3 class="block__title">Услуги Росреестра</h3>
+                            <p class="block__description">В поисковой строке укажите Код платежа, который был отправлен вам
+                            на почтовый ящик, указанный при подаче запроса в Росреестре.</p>
+                            <p class="block__description block__description--alert">нет кода?</p>
+                            <p class="block__description">Если у вас еще нет кода платежа, перейдите на сайт rosreestr.ru и сформируйте запрос на оплату электронных услуг
+                            Росреестра.</p>
+                        </div>
+            
+                        <div class="block__right">
+                            <img src="img/img_4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="blocks__mobile">
+                <div class="accordion">
+                    <div class="trigger">
+                        <input type="checkbox" id="checkbox-1" name="checkbox-1">
+                        <label for="checkbox-1" class="checkbox">
+                            <a href="#" class="check__gibdd">Штрафы ГИБДД</a> <i></i>
+                        </label>
+                        <div class="content">
+                            <p class="block__description">Для поиска укажите номера водительского удостоверения и свидетельства о регистрации ТС
+                                или номер штрафа.</p>
+                            <p class="block__description">Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты
+                                самостоятельно.</p>
+                            <p class="block__description block__description--alert">платить Вовремя — дешевле!</p>
+                            <p class="block__description">В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%. Для
+                                своевременной оплаты штрафов настройте уведомления в Личном кабинете.</p>
+                        </div>
+                    </div>
+
+                    <div class="trigger">
+                        <input type="checkbox" id="checkbox-5" name="checkbox-5">
+                        <label for="checkbox-5" class="checkbox">
+                            <a href="#" class="check__duty">Пошлины ГИБДД</a> <i></i>
+                        </label>
+                        <div class="content">
+                            <p class="block__description">Для поиска начислений в ГИС ГМП укажите документы:
+                                паспорт РФ, ИНН, СНИЛС или номер Исполнительного производства</p>
+                            <p class="block__description">Вы можете указать реквизиты платежа самостоятельно, заполнив форму.</p>
+                            <p class="block__description block__description--alert">Удобно!</p>
+                            <p class="block__description">Судебные задолженности можно погасить как сразу, так и по частям, комфортными для
+                                вас
+                                платежами. Информацию о
+                                совершенных платежах сохраняйте в Личном кабинете.</p>
+                        </div>
+                    </div>
+                
+                    <div class="trigger">
+                        <input type="checkbox" id="checkbox-2" name="checkbox-2">
+                        <label for="checkbox-2" class="checkbox">
+                            <a href="#" class="check__justice">Судебные задолженности</a> <i></i>
+                        </label>
+                        <div class="content">
+                            <p class="block__description">Для поиска начислений в ГИС ГМП укажите документы:
+                                паспорт РФ, ИНН, СНИЛС или номер Исполнительного производства</p>
+                            <p class="block__description">Вы можете указать реквизиты платежа самостоятельно, заполнив форму.</p>
+                            <p class="block__description block__description--alert">Удобно!</p>
+                            <p class="block__description">Судебные задолженности можно погасить как сразу, так и по частям, комфортными для вас
+                                платежами. Информацию о
+                                совершенных платежах сохраняйте в Личном кабинете.</p>
+                        </div>
+                    </div>
+                
+                    <div class="trigger">
+                        <input type="checkbox" id="checkbox-3" name="checkbox-3">
+                        <label for="checkbox-3" class="checkbox">
+                                <a href="#" class="check__tax">Налоги</a> <i></i>
+                        </label>
+                        <div class="content">
+                            <p class="block__description">Для поиска начислений по налогам в ГИС ГМП укажите ИНН или
+                                Индекс налогового документа, усли у вас на руках есть квитанция.</p>
+                            <p class="block__description block__description--alert">Важно!</p>
+                            <p class="block__description">Согласно законодательству РФ вы не можете оплачивать налоги за других физических лиц.
+                                Принимаются только платежи физических лиц.</p>
+                        </div>
+                    </div>
+
+                    <div class="trigger">
+                        <input type="checkbox" id="checkbox-4" name="checkbox-4">
+                        <label for="checkbox-4" class="checkbox">
+                            <a href="#" class="check__service">Услуги Росреестра </a><i></i>
+                        </label>
+                        <div class="content">
+                            <p class="block__description">В поисковой строке укажите Код платежа, который был отправлен вам
+                                на почтовый ящик, указанный при подаче запроса в Росреестре.</p>
+                            <p class="block__description block__description--alert">нет кода?</p>
+                            <p class="block__description">Если у вас еще нет кода платежа, перейдите на сайт rosreestr.ru и сформируйте запрос на
+                                оплату электронных услуг
+                                Росреестра.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="work container">
+        <div class="work__title">С нами работают</div>
+        <div class="work__block">
+            <div class="work__card">
+                <div class="work__img"><img src="img/part_1.svg" alt="part_1"></div>
+                <div class="work__text">Партнер 1</div>
+            </div>
+            <div class="work__card">
+                <div class="work__img"><img src="img/part_2.svg" alt="part_2"></div>
+                <div class="work__text">Компания-партнер с длинным названием</div>
+            </div>
+            <div class="work__card">
+                <div class="work__img"><img src="img/part_3.svg" alt="part_3"></div>
+                <div class="work__text">Партнер 3</div>
+            </div>
+            <div class="work__card">
+                <div class="work__img"><img src="img/part_4.svg" alt="part_4"></div>
+                <div class="work__text">Название партнера 4</div> 
+            </div>
+            <div class="work__card">
+                <div class="work__img"><img src="img/part_5.svg" alt="part_5"></div>
+                <div class="work__text">Компания-партнер 5</div>
+            </div>
+            <div class="work__card">
+                <div class="work__img"><img src="img/part_6.svg" alt="part_6"></div>
+                <div class="work__text">Партнер 6 с длинным названием</div>
+            </div>
+        </div>
+
     </section>
 
   </main>
@@ -51,10 +316,81 @@
 
   <footer class="main-footer">
 
-    
+    <div class="main-footer__desktop">
+      <div class="main-footer__content">
+
+    <div class="main-footer__left left">
+       <div class="left__block">
+            <div class="left__info">
+                <p class="left__text">© 2012–2018</p>
+                <p class="left__text">ООО «Название компании»</p>
+            </div>
+            <div class="left__info">
+                <div class="left__img"><img src="img/secure_icon.svg" alt="secure_icon"></div>
+            </div>
+       </div>
+
+       <div class="right__block">
+           <div class="right__menu">
+               <ul class="right__list">
+                   <li class="right__item"><a href="#">О сервисе</a></li>
+                    <li class="right__item"><a href="#">Способы оплаты</a></li>
+                    <li class="right__item"><a href="#">Как это работает</a></li>
+                    <li class="right__item"><a href="#">Партнёрам</a></li>
+                    <li class="right__item"><a href="#">Статьи и новости</a></li>
+               </ul>
+           </div>
+
+       </div>
+    </div>
+
+    <div class="main-footer__right">
+
+        <div class="left__info">
+
+
+            <div class="left__content">
+            <div class="left__phone"><a href="">8 800 123 4567</a></div>
+            <div class="left__description">звонок по России бесплатный</div>
+            </div>
+
+            <div class="right__content">
+            <ul class="right__list">
+                <li class="right__item"><a href="#">Обратная связь</a></li>
+                <li class="right__item"><a href="#">Мы вКонтакте</a></li>
+            </ul>
+            </div>
+            
+        </div>
+
+        <div class="right__info">
+            <div class="right__about">
+                <p class="right__text">Дополнительные ссылки и копирайты ООО «Фирма 2»</p>
+                <p class="right__text"><img src="img/logo_2.svg" alt="logo_2"></p>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    </div>
+
+    <div class="main-footer__mobile">
+    <div class="left__block">
+        <div class="left__info">
+            <p class="left__text">© 2012–2018</p>
+            <p class="left__text">ООО «Название компании»</p>
+            <p class="right__text">Дополнительные ссылки и копирайты ООО «Фирма 2»</p>
+        </div>
+        <div class="left__info">
+            <div class="left__img"><img src="img/secure_icon.svg" alt="secure_icon"></div>
+        </div>
+    </div>
+    </div>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="js/magnific-popup.js"></script>
   <script src="js/main.js"></script>
   </body>
 </html>

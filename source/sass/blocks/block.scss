@@ -1,0 +1,150 @@
+.block___all
+{
+    border-top: 1px solid #cedae4;
+    border-bottom: 1px solid #cedae4;
+    padding-top: 75px;
+    &--tax
+    {
+    border-top:none;
+    border-bottom: none;
+    }
+    &--gibdd 
+    {
+    border-top:none;
+    border-bottom: none; 
+    padding-top: 0;
+    }
+}
+
+.block
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 75px;
+}
+
+.block-reverse
+{
+    flex-direction: row-reverse;
+}
+
+.block__left
+{
+    width: 70%;
+}
+
+.block-reverse .block__left
+{
+    width: 65%;
+}
+
+.block__title
+{
+     font-family: $font-family;
+    font-size: 24px;
+    line-height: 34px;
+    color: #000;
+    padding-bottom: 25px;
+}
+
+.block__description
+{
+    width: 90%;
+     font-family: $font-family;
+    font-size: 15px;
+    line-height: 25px;
+    color: #000;
+    padding-bottom: 10px;
+    &--alert
+    {
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #d30531;
+        padding-top: 22px;
+        padding-bottom: 15px;
+    }
+
+    &--link a
+    {
+         font-family: $font-family;
+        font-size: 24px;
+        line-height: 34px;
+        color: #0777ba;
+        text-decoration: none;
+        border-bottom: 1px solid #0777ba;
+        padding-top: 42px;
+    }
+}
+
+
+.block__right
+{
+    margin-top: 8px;
+}
+
+     .blocks__mobile
+ {
+     display: none;
+ }
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+
+     .blocks__mobile
+ {
+     display: none;
+ }
+
+ .block
+ {
+     flex-direction: column;
+     width: 90%;
+     margin: 0 auto;
+
+ }
+
+ .block__left {
+
+    width: 100%;
+
+}
+
+.block-reverse .block__left {
+
+    width: 100%;
+}
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+ .block__desktop
+ {
+     display: none;
+ }
+
+ .blocks__mobile
+ {
+     display: block;
+ }
+
+ .block__description {
+    width: 80%;
+    font-family: "PT-Sans";
+    font-size: 15px;
+    line-height: 25px;
+    color: #000;
+    padding-bottom: 0px;
+    margin: 0 auto;
+     &--alert
+    {
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #d30531;
+        padding-top: 22px;
+        padding-bottom: 15px;
+    }
+
+}
+}
+

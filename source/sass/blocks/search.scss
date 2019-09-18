@@ -5,7 +5,7 @@
     background-size: cover;
     position: relative;
     background-position: right;
-    padding-top: 115px;
+    padding-top: 175px;
     padding-bottom: 115px;
 }
 
@@ -22,7 +22,8 @@
 {
     background-color: rgb(255, 255, 255);
     box-shadow: inset 0px 1px 3px 0px rgba(21, 38, 53, 0.82);
-    width: 813px;
+    width: 100%;
+    max-width: 813px;
     height: 60px;
     font-family: $font-family;
     color: #969696;
@@ -51,4 +52,107 @@
     line-height: 25px;
     color: #fff;
     padding-top: 18px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+
+      .search__title
+{
+    font-family: $font-family;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    line-height: 31px;
+    text-shadow: 0px 2px 5px rgba(0, 36, 69, 0.35);
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.search__description
+{
+    display: none;
+}
+
+    .search__form form
+{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.search__button
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+    .search
+    {
+    padding-top: 105px;
+    padding-bottom: 75px;
+    }
+
+    .search__title
+{
+    font-family: $font-family;
+    font-size: 21px;
+    color: rgb(255, 255, 255);
+    line-height: 31px;
+    text-shadow: 0px 2px 5px rgba(0, 36, 69, 0.35);
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.search__form form
+{
+    width: 90%;
+    margin: 0 auto;
+}
+
+    .search__form input
+{
+    background-color: rgb(255, 255, 255);
+    box-shadow: inset 0px 1px 3px 0px rgba(21, 38, 53, 0.82);
+    width: 100%;
+    max-width: 813px;
+    height: 60px;
+    font-family: $font-family;
+    color: #969696;
+    font-size: 18px;
+    padding-left: 20px;
+    border: none;
+}
+
+    .search__button
+{
+    width: 22px;
+    height: 22px;
+    background-image: url("../img/search_icon.svg");
+    background-color: inherit;
+    box-shadow: none;
+    border: none;
+    position: absolute;
+    left: 85%;
+    top: 64%;
+    cursor: pointer;
+}
+
+.search__button span 
+{
+    display: none;
+}
+
+.search__description
+{
+    display: none;
+}
+
 }
